@@ -40,28 +40,29 @@ class MainWindow(QMainWindow):
                 font1 = QFont("Segoe UI Black", 48, QFont.Bold)
                 label1.setFont(font1)
 
-                # Set the color of the text to red using the style sheet
-                label1.setStyleSheet("color: red")
+
 
                 # Create another label with the text "SHRO SUITE 2023"
                 label2 = QLabel("SHRO SUITE 2023")
                 label2.setAlignment(Qt.AlignCenter)
                 font2 = QFont("Segoe UI Black", 72, QFont.Bold)
                 label2.setFont(font2)
+                # Set the color of the text to red using the style sheet
+                label2.setStyleSheet("color: red")
 
                 # Add the labels to a vertical layout
                 layout = QVBoxLayout(tab)
+                layout.setSpacing(5)
                 layout.addWidget(label1)
                 layout.addWidget(label2)
+
 
                 # Load the image and create a label to display it
                 pixmap = QPixmap("SS3.png")
                 label3 = QLabel()
                 label3.setPixmap(pixmap)
                 label3.setAlignment(Qt.AlignCenter)
-
-                # Add spacing between the image and the labels
-                layout.addSpacing(70)
+                layout.setSpacing(30)
 
                 # Create the two labels for Current OBS and enrollment count
                 obs_label = QLabel("Current OBS:")
